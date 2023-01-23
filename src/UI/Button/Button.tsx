@@ -1,7 +1,5 @@
-import React from 'react'
-
 const Button = () => {
-  return <div>some shit</div>
-}
+  return <div>some shit</div>;
+};
 
-export default Button
+export default Button;

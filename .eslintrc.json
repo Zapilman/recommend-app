@@ -9,7 +9,6 @@
     "standard-with-typescript",
     "plugin:prettier/recommended"
   ],
-  "overrides": [],
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module",
@@ -23,6 +22,9 @@
       {
         "endOfLine": "auto"
       }
-    ]
+    ],
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/prefer-nullish-coalescing": "off",
+    "@typescript-eslint/explicit-function-return-type": "off"
   }
 }
