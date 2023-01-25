@@ -10,12 +10,16 @@ const SelectCategory = () => {
   const getTableContent = () => {
     const arr = ['asda', 'asdasd', 'asdas', 'asdqweqwe', 'qweasda'];
     return arr.map((_, index) => {
-      return <CategoryCard key={index} category={category} />;
+      return category;
     });
   };
   return (
     <div>
-      <GridTable items={getTableContent()} />
+      <GridTable
+        data={getTableContent()}
+        renderItem={(item) => <CategoryCard category={item} />}
+        keyExtractor={({ title }) => title}
+      />
     </div>
   );
 };

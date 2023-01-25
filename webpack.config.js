@@ -10,6 +10,7 @@ module.exports = {
   },
   devServer: {
     port: 3000,
+    historyApiFallback: true,
   },
   resolve: {
     modules: [__dirname, 'src', 'node_modules'],
