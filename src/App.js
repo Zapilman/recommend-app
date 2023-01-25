@@ -1,15 +1,8 @@
-import Button from './UI/Button/Button';
 import './style.css';
-import GridTable from './UI/GridTable/GridTable';
+import React from 'react';
+import Main from './pages/Main/Main';
 
 const App = () => {
-  return (
-    <div>
-      <h1>Hello World</h1>
-      <Button />
-      <GridTable />
-      <div>some </div>
-    </div>
-  );
+  return <Main />;
 };
 export default App;
