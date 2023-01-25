@@ -1,8 +1,8 @@
 {
   "name": "recommend-app",
-  "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "private": true,
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production",
