@@ -7,6 +7,8 @@ const Main = () => {
     <>
       <SelectCategory />
       <BestOfCategories title="Best of games" />
+      <BestOfCategories title="Best of Movies" />
+      <BestOfCategories title="Best of Books" />
     </>
   );
 };

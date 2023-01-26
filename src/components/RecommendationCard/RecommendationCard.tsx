@@ -10,7 +10,13 @@ interface Props {
 const RecommendationCard: FC<Props> = ({ recommendation, customRef }) => {
   return (
     <div ref={customRef} className={styles.card}>
-      <img src={recommendation.photo} alt={recommendation.title} />
+      <img
+        src={recommendation.photo}
+        alt={recommendation.title}
+        onLoad={() => {
+          console.log('loaded');
+        }}
+      />
       <h6>{recommendation.title}</h6>
       <span>{recommendation.countOfLikes}</span>
       <span>{recommendation.type}</span>

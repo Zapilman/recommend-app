@@ -25,12 +25,16 @@ const getTableContent = () => {
 const BestOfCategories: FC<Props> = ({ title }) => {
   const cardRef = useRef<HTMLDivElement>();
   const [gridHeigth, setGridHeight] = useState<number>(0);
-  const [isDividerClicked, setIsDividerClicked] = useState<boolean>(false);
+  const [isDividerActive, setIsDividerActive] = useState<boolean>(true);
 
   useEffect(() => {
-    const { offsetHeight } = cardRef.current;
-    setGridHeight(isDividerClicked && cardRef.current ? offsetHeight + 50 : 0);
-  }, [isDividerClicked]);
+    setTimeout(() => {
+      const { offsetHeight } = cardRef.current;
+      setGridHeight(isDividerActive && cardRef.current ? offsetHeight + 50 : 0);
+    }, 0);
+  }, [isDividerActive]);
+
+  console.log('gridHeigth', gridHeigth);
 
   return (
     <div className={styles.container}>
@@ -51,7 +55,7 @@ const BestOfCategories: FC<Props> = ({ title }) => {
         <Divider
           title={title}
           onClick={() => {
-            setIsDividerClicked((prev) => !prev);
+            setIsDividerActive((prev) => !prev);
           }}
         />
       )}
