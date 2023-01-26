@@ -34,8 +34,6 @@ const BestOfCategories: FC<Props> = ({ title }) => {
     }, 0);
   }, [isDividerActive]);
 
-  console.log('gridHeigth', gridHeigth);
-
   return (
     <div className={styles.container}>
       <h5>{title}</h5>
