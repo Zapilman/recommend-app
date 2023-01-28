@@ -1,4 +1,5 @@
 import { FC, useEffect, useRef, useState } from 'react';
+
 import RecommendationCard from '../../components/RecommendationCard/RecommendationCard';
 import { RecommendationPreviewType } from '../../types/Recommendation';
 import Divider from '../../UI/Divider/Divider';

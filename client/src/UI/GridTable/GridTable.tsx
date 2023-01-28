@@ -1,6 +1,7 @@
-import React from 'react';
-import styles from './GridTable.module.scss';
 import cn from 'classnames';
+import React from 'react';
+
+import styles from './GridTable.module.scss';
 
 interface Props<T> {
   data: T[];

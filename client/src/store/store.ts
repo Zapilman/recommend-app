@@ -1,7 +1,8 @@
 import { configureStore, PreloadedState } from '@reduxjs/toolkit';
-import counterReducer from './slices/conterSlice';
-import { useDispatch, useSelector } from 'react-redux';
 import type { TypedUseSelectorHook } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+
+import counterReducer from './slices/conterSlice';
 
 const rootReducer = {
   counter: counterReducer,

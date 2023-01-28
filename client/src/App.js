@@ -1,10 +1,12 @@
 import './style.css';
+
 import React from 'react';
-import Main from './pages/Main/Main';
 import { Route, Routes } from 'react-router-dom';
-import About from './pages/About/About';
-import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
+
 import MainLayout from './layouts/MainLayout';
+import About from './pages/About/About';
+import Main from './pages/Main/Main';
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 
 const App = () => {
   return (

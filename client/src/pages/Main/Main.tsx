@@ -1,4 +1,5 @@
 import React from 'react';
+
 import BestOfCategories from '../../modules/BestOfCategories/BestOfCategories';
 import SelectCategory from '../../modules/SelectCategory/SelectCategory';
 

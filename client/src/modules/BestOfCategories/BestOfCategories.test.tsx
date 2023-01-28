@@ -1,6 +1,7 @@
 import { screen } from '@testing-library/react';
-import BestOfCategories from './BestOfCategories';
+
 import { renderWithProviders } from '../../utils/test-utils';
+import BestOfCategories from './BestOfCategories';
 
 describe('BestOfCategories', () => {
   it('should render title', () => {
