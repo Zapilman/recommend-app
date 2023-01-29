@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { useAppSelector } from '../../store/store';
+import LikedCategoryItems from '../../components/LikedCategoryItems/LikedCategoryItems';
 
 const Header = () => {
-  const value = useAppSelector((state) => state.counter.value);
   return (
     <header>
       <ul>
@@ -15,7 +14,7 @@ const Header = () => {
           <Link to="/">home</Link>
         </li>
       </ul>
-      <span>{value}</span>
+      <LikedCategoryItems />
     </header>
   );
 };
