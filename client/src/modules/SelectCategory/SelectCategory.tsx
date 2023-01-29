@@ -1,25 +1,26 @@
-import React from 'react';
+import { useQuery } from '@apollo/client';
 
+import { GET_ALL_CATEGORIES } from '../../api/queries';
 import CategoryCard from '../../components/CategoryCard/CategoryCard';
 import GridTable from '../../UI/GridTable/GridTable';
 
 const SelectCategory = () => {
-  const category = {
-    title: 'Games',
-    icon: 'https://static.twitchcdn.net/assets/gaming-e9019587744b56b11b43.svg',
-  };
-  const getTableContent = () => {
-    const arr = ['asda', 'asdasd', 'asdas', 'asdqweqwe', 'qweasda'];
-    return arr.map((_, index) => {
-      return category;
-    });
-  };
+  const { data, loading, error } = useQuery(GET_ALL_CATEGORIES);
+
+  if (loading) {
+    return <span>loading</span>;
+  }
+
+  if (error) {
+    return <span>error</span>;
+  }
+
   return (
     <div>
       <GridTable
-        data={getTableContent()}
+        data={data.getAllCategories}
         renderItem={(item) => <CategoryCard category={item} />}
-        keyExtractor={({ title }) => title}
+        keyExtractor={({ id }) => id}
       />
     </div>
   );

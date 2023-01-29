@@ -7,7 +7,7 @@ interface Props {
 }
 
 const CategoryCard: FC<Props> = ({ category }) => {
-  return <Card title={category.title} icon={category.icon} />;
+  return <Card title={category.name} icon={category.icon} />;
 };
 
 export default CategoryCard;
