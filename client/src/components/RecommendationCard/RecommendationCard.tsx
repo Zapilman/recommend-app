@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { increment } from '../../store/slices/conterSlice';
+import { increment } from '../../store/slices/likeSlice';
 import { useAppDispatch } from '../../store/store';
 import { RecommendationPreviewType } from '../../types/Recommendation';
 import styles from './RecommendationCard.module.scss';
@@ -19,13 +19,7 @@ const RecommendationCard: FC<Props> = ({ recommendation, customRef }) => {
       className={styles.card}
       onClick={() => dispatch(increment())}
     >
-      <img
-        src={recommendation.photo}
-        alt={recommendation.title}
-        onLoad={() => {
-          console.log('loaded');
-        }}
-      />
+      <img src={recommendation.photo} alt={recommendation.title} />
       <h6>{recommendation.title}</h6>
       <span>{recommendation.countOfLikes}</span>
       <span>{recommendation.type}</span>

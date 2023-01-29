@@ -10,9 +10,7 @@ type Category {
 type CategoryItem {
   name: String!
 
-  """
-  category of item
-  """
+  """category of item"""
   category: String!
 }
 
@@ -26,12 +24,8 @@ type Mutation {
   createCategory(createCategoryInput: CreateCategoryInput!): Category!
   updateCategory(updateCategoryInput: UpdateCategoryInput!): Category!
   removeCategory(id: Int!): Category!
-  createCategoryItem(
-    createCategoryItemInput: CreateCategoryItemInput!
-  ): CategoryItem!
-  updateCategoryItem(
-    updateCategoryItemInput: UpdateCategoryItemInput!
-  ): CategoryItem!
+  createCategoryItem(createCategoryItemInput: CreateCategoryItemInput!): CategoryItem!
+  updateCategoryItem(updateCategoryItemInput: UpdateCategoryItemInput!): CategoryItem!
   removeCategoryItem(id: Int!): CategoryItem!
 }
 
@@ -47,18 +41,14 @@ input UpdateCategoryInput {
 input CreateCategoryItemInput {
   name: String!
 
-  """
-  category of item
-  """
+  """category of item"""
   category: String!
 }
 
 input UpdateCategoryItemInput {
   name: String
 
-  """
-  category of item
-  """
+  """category of item"""
   category: String
   id: Int!
 }

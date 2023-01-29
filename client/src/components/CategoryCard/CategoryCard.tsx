@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { Link } from 'react-router-dom';
 
 import Card from '../../UI/Card/Card';
 
@@ -7,7 +8,11 @@ interface Props {
 }
 
 const CategoryCard: FC<Props> = ({ category }) => {
-  return <Card title={category.name} icon={category.icon} />;
+  return (
+    <Link to={'card'}>
+      <Card title={category.name} icon={category.icon} />
+    </Link>
+  );
 };
 
 export default CategoryCard;
