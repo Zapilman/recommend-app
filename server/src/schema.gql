@@ -15,6 +15,7 @@ type CategoryItem {
 }
 
 type Query {
+  getAllCategories: [Category!]!
   category(id: String!): Category!
   categoryItem(id: Int!): CategoryItem!
 }
