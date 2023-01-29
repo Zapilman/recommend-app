@@ -15,7 +15,7 @@ export class CategoryResolver {
     return this.categoryService.create(createCategoryInput);
   }
 
-  @Query(() => [Category], { name: 'category' })
+  @Query(() => [Category], { name: 'getAllCategories' })
   findAll() {
     return this.categoryService.findAll();
   }
