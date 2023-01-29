@@ -7,14 +7,25 @@ type Category {
   name: String!
 }
 
+type CategoryItem {
+  name: String!
+
+  """category of item"""
+  category: String!
+}
+
 type Query {
-  category(id: Int!): Category!
+  category(id: String!): Category!
+  categoryItem(id: Int!): CategoryItem!
 }
 
 type Mutation {
   createCategory(createCategoryInput: CreateCategoryInput!): Category!
   updateCategory(updateCategoryInput: UpdateCategoryInput!): Category!
   removeCategory(id: Int!): Category!
+  createCategoryItem(createCategoryItemInput: CreateCategoryItemInput!): CategoryItem!
+  updateCategoryItem(updateCategoryItemInput: UpdateCategoryItemInput!): CategoryItem!
+  removeCategoryItem(id: Int!): CategoryItem!
 }
 
 input CreateCategoryInput {
@@ -23,5 +34,20 @@ input CreateCategoryInput {
 
 input UpdateCategoryInput {
   name: String
+  id: Int!
+}
+
+input CreateCategoryItemInput {
+  name: String!
+
+  """category of item"""
+  category: String!
+}
+
+input UpdateCategoryItemInput {
+  name: String
+
+  """category of item"""
+  category: String
   id: Int!
 }

@@ -8,10 +8,10 @@ import { Category, CategoryDocument } from './entities/category.schema';
 @Injectable()
 export class CategoryService {
   constructor(
-    @InjectModel(Category.name) private newsModel: Model<CategoryDocument>,
+    @InjectModel(Category.name) private categoryModel: Model<CategoryDocument>,
   ) {}
   async create(createCategoryInput: CreateCategoryInput) {
-    const category = await new this.newsModel(createCategoryInput);
+    const category = await new this.categoryModel(createCategoryInput);
     return category.save();
   }
 
@@ -19,8 +19,8 @@ export class CategoryService {
     return `This action returns all category`;
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} category`;
+  findOne(id: string) {
+    return this.categoryModel.findById(id);
   }
 
   update(id: number, updateCategoryInput: UpdateCategoryInput) {

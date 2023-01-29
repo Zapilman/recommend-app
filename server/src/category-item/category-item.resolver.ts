@@ -9,7 +9,10 @@ export class CategoryItemResolver {
   constructor(private readonly categoryItemService: CategoryItemService) {}
 
   @Mutation(() => CategoryItem)
-  createCategoryItem(@Args('createCategoryItemInput') createCategoryItemInput: CreateCategoryItemInput) {
+  createCategoryItem(
+    @Args('createCategoryItemInput')
+    createCategoryItemInput: CreateCategoryItemInput,
+  ) {
     return this.categoryItemService.create(createCategoryItemInput);
   }
 
@@ -24,8 +27,14 @@ export class CategoryItemResolver {
   }
 
   @Mutation(() => CategoryItem)
-  updateCategoryItem(@Args('updateCategoryItemInput') updateCategoryItemInput: UpdateCategoryItemInput) {
-    return this.categoryItemService.update(updateCategoryItemInput.id, updateCategoryItemInput);
+  updateCategoryItem(
+    @Args('updateCategoryItemInput')
+    updateCategoryItemInput: UpdateCategoryItemInput,
+  ) {
+    return this.categoryItemService.update(
+      updateCategoryItemInput.id,
+      updateCategoryItemInput,
+    );
   }
 
   @Mutation(() => CategoryItem)
